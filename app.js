@@ -21,14 +21,14 @@ app.use(session({
 
 //몽고db 연결
 function connectDB(){
-  var databaseUrl = "mongodb://localhost:27017/testdb";
+  var databaseUrl = "mongodb://admin:tkd8328065@ds155028.mlab.com:55028/studydb";
 
   //DB 연결
 
   mongodb.connect(databaseUrl, function(err, database){
     if(err) throw err;
     console.log('DB 연결 완료! : '+ databaseUrl);
-    app.set('database', database.db('testdb'));  //보간
+    app.set('database', database.db('studydb'));  //보간
   });
 }
 
